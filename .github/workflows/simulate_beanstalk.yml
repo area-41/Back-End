@@ -19,6 +19,8 @@ jobs:
 
       - name: Criar o artefato app.zip
         run: |
+          # Navega até a pasta onde estão os ficheiros do Flask e gera o zip a partir dela
+          cd src/codigos/docker
           zip -r app.zip . -x "*.git*"
 
       - name: Simular Deploy no Runner do GitHub
