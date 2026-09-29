@@ -1,0 +1,8 @@
+Para excutar shell somples dentro do container docker
+
+    docker run -it -v "$(pwd)":/app -p 3000:3000 flask ash
+
+
+Para iniciar um container de forma interativa
+
+    docker start -ai flask_app
