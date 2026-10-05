@@ -1,0 +1,26 @@
+FROM python:3.11-slim
+
+# Instala o uv dentro do contêiner
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
+
+WORKDIR /app
+
+# Copia os arquivos de dependência primeiro para aproveitar o cache do Docker
+COPY pyproject.toml uv.lock ./
+
+# Instala as dependências usando o uv no ambiente do contêiner
+RUN uv sync --frozen --no-cache
+
+RUN uv run apk add sqlite
+RUN uv run pip install Flask Faker flask-cors \
+      Flask-JWT-Extended pydantic flask_pydantic \
+      Flask_Caching bleach flask_limiter bcrypt \
+      django fastapi[standard] aiosqlite
+
+expose 3000
+
+# Copia o restante do código-fonte
+#COPY . .
+
+# Executa sua aplicação (exemplo com FastAPI/Uvicorn)
+CMD ["uv", "run", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]

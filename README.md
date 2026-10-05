@@ -95,3 +95,67 @@ Uninstalled 1 package in 6ms
 Installed 2 packages in 37ms
  ~ codigos==0.1.0 (from file://)
  + waitress==3.0.2
+
+
+## Instalando pytest sem5
+
+        uv add pytest
+
+Resolved 19 packages in 417ms
+      Built codigos @ file://        
+Prepared 1 package in 92ms
+Uninstalled 1 package in 5ms
+Installed 7 packages in 1.19s
+ ~ codigos==0.1.0 (from file:/)
+ + colorama==0.4.6
+ + iniconfig==2.3.0
+ + packaging==26.3
+ + pluggy==1.6.0
+ + pygments==2.21.0
+ + pytest==9.1.1
+
+
+### Exibir os Testes no Terminal
+Você pode usar flags do pytest para mudar o formato de exibição dos seus testes:
+Exibição Detalhada (Nome por Nome), adicione a flag -v (verbose):
+
+        python -m pytest -v
+
+Exibição Detalhada + Saída do print(), por padrão, o pytest esconde as chamadas de print(). Adicione a flag -s para exibi-las no terminal:
+
+        python -m pytest -v -s
+
+
+## Instalando pytest html - Gerar um Relatório Visual (HTML)
+
+        uv add pytest-html
+
+Resolved 21 packages in 368ms
+      Built codigos @ file://        
+Prepared 3 packages in 138ms
+Uninstalled 1 package in 5ms
+Installed 3 packages in 69ms
+ ~ codigos==0.1.0 (from file://)
+ + pytest-html==4.2.0
+ + pytest-metadata==3.1.1
+
+
+Execute o pytest indicando onde salvar o relatório:
+
+        python -m pytest --html=relatorio_testes.html
+
+Resposta:
+
+        ========================================================= test session starts ==========================================================
+        platform win32 -- Python 3.12.14, pytest-9.1.1, pluggy-1.6.0
+        rootdir: C:\
+        configfile: pyproject.toml
+        plugins: html-4.2.0, metadata-3.1.1
+        collected 10 items                                                                                                                      
+
+        test_app.py .........                                                                                                             [ 90%]
+        test_flask_manual.py .                                                                                                            [100%]
+
+        - Generated html report: file:///relatorio_testes.html -
+
+![alt text](image.png)

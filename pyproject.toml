@@ -1,0 +1,25 @@
+[project]
+name = "codigos"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Área 41", email = "email.diferente.victor@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "flask>=3.1.3",
+    "flask-cors>=6.0.5",
+    "gunicorn>=26.2.0",
+    "pyngrok>=8.1.2",
+    "pytest>=9.1.1",
+    "pytest-html>=4.2.0",
+    "waitress>=3.0.2",
+]
+
+[project.scripts]
+codigos = "codigos:main"
+
+[build-system]
+requires = ["uv_build>=0.12.6,<0.13.0"]
+build-backend = "uv_build"
