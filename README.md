@@ -1,4 +1,125 @@
-## Usando UV para instalar Flask em um ambiente venv
+# Backend Python Study Repository
+
+Bem-vindo ao repositório de estudos de Backend em Python! Este projeto reúne conceitos, práticas e ferramentas modernas de desenvolvimento Web API utilizando a stack Python, com foco no ecossistema Flask, validação com Pydantic e segurança com JWT.
+
+## Tecnologias & Ferramentas Principais
+
+Neste repositório, exploramos e aplicamos as seguintes bibliotecas e ecossistemas:
+
+- Flask (3.1.x) - Micro-framework web leve e flexível para criação de APIs RESTful.
+
+- Pydantic (2.13.x) & Flask-Pydantic - Validação de dados rigorosa, tipagem estática e serialização com alto desempenho.
+
+- Flask-JWT-Extended & PyJWT - Autenticação e autorização via JSON Web Tokens.
+
+- bcrypt - Criptografia e hashing seguro de senhas.
+
+- Flask-Limiter - Rate limiting para proteção da API contra ataques de força bruta e DoS.
+
+- Flask-Caching & Cachelib - Estratégias de armazenamento em cache para otimização de performance.
+
+- Flask-CORS - Gerenciamento de declaração de origem cruzada (CORS).
+
+- Bleach - Sanitização de HTML e prevenção de vulnerabilidades como XSS.
+
+- Faker - Geração de dados fictícios para testes e povoamento de banco de dados (seeding).
+
+### Pré-requisitos
+
+Antes de começar, garante que você possui instalado em sua máquina:
+
+- Python 3.10+
+
+- pip (ou Poetry / uv)
+
+### Configuração e Instalação
+
+### Usando pip e requirements.txt
+
+Clone o repositório:
+
+        git clone https://github.com/seu-usuario/seu-repositorio.git
+        cd seu-repositorio
+
+
+Crie e ative um ambiente virtual (venv):
+
+#### Linux/macOS
+        python3 -m venv .venv
+        source .venv/bin/activate
+
+#### Windows
+        python -m venv .venv
+        .venv\Scripts\activate
+
+
+Instale as dependências:
+
+        pip install -r requirements.txt
+
+
+### Usando pyproject.toml (Poetry / UV)
+
+Se o projeto utiliza o gerenciamento moderno via pyproject.toml:
+
+Usando Poetry:
+
+        poetry install
+        poetry shell
+
+
+Usando UV:
+
+        uv sync
+
+
+### Como Executar a Aplicação
+
+Certifique-se de estar com o ambiente virtual ativado.
+
+Defina as variáveis de ambiente necessárias (ou crie um arquivo .env na raiz do projeto):
+
+        export FLASK_APP=app.py
+        export FLASK_ENV=development
+
+
+Inicie o servidor de desenvolvimento:
+
+                flask run
+
+### A API estará acessível em http://127.0.0.1:5000.
+
+
+Clique no link após ter iniciado o Flask.
+
+---
+
+### Conceitos Estudados no Repositório
+
+```
+[x] Arquitetura de APIs RESTful com Flask
+
+[x] Validação e Parsing de Schemas com Pydantic v2
+
+[x] Autenticação Stateless (JWT - Access & Refresh Tokens)
+
+[x] Hashing seguro de senhas utilizando Bcrypt
+
+[x] Boas práticas de Segurança (CORS, Sanitização de Payload e Rate Limiting)
+
+[x] Otimização de Performance com Caching
+
+[x] Mock de Dados e Testes Integrados com Faker
+
+```
+
+Este repositório destina-se para fins puramente educacionais e de aprendizado.
+
+
+---
+
+# Bibliotecas instaladas
+### Usando UV para instalar Flask em um ambiente venv
 
 
     uv venv .venv
