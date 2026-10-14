@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Minha Aplicação Flask{% endblock %}</title>
+    
+    <!-- CSS Estático via Jinja2 -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('main.home') }}">Home</a></li>
+                <li><a href="{{ url_for('main.about') }}">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Bloco dinâmico preenchido pelas páginas filhas -->
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Minha Aplicação Flask. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- JS Estático via Jinja2 -->
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>

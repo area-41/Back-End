@@ -1,0 +1,50 @@
+#1 Acesse o cabeçalho 'Accept-Language' da requisição HTTP:
+from flask import Flask, request
+
+app = Flask(__name__)
+
+@app.route("/language")
+def language():
+    language = request.headers.get('Accept-Language')
+    return f"{language}"
+
+
+
+#2 Complete o retorno para que a rota envie o código de status 404:
+#from flask import Flask
+#app = Flask(__name__)
+
+@app.route("/notFound")
+def lancar_erro():
+    return "Página não encontrada", 404
+
+
+#3 Use a função nativa do Flask para retornar um dicionário como uma resposta JSON:
+#from flask import Flask
+#app = Flask(__name__)
+
+@app.route("/api/status")
+def get_status():
+    dados = {"status": "operacional", "versao": "1.0"}
+    return dados
+
+#4 Complete o código para definir uma rota que responda ao caminho '/boas-vindas':
+#from flask import Flask
+#app = Flask(__name__)
+@app.route('/boas-vindas')
+def hello():
+    return "Olá, Flask!"
+
+#5 Complete o código para capturar o nome do usuário vindo da URL:
+#from flask import Flask
+#app = Flask(__name__)
+@app.route("/usuario/<string:nome>")
+def get_user(nome):
+    return f"Perfil de: {nome}"
+
+#6 Defina que o parâmetro 'numero' deve ser tratado como um número inteiro:
+#from flask import Flask
+#app = Flask(__name__)
+@app.route("/dobro/<int:numero>")
+def calcular_dobro(numero):
+    return str(numero * 2)

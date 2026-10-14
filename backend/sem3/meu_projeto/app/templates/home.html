@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Página Inicial - App Flask{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h1>Bem-vindo à Aplicação Flask!</h1>
+    <p>Esta é a página inicial renderizada com a estrutura modular e profissional.</p>
+    
+    <div class="banner">
+        <!-- Imagem vinda do diretório static -->
+        <img src="{{ url_for('static', filename='flask.png') }}" alt="Logo do Flask">
+    </div>
+
+    <div class="actions">
+        <a href="{{ url_for('main.about') }}" class="btn-primary">Ver página Sobre</a>
+    </div>
+</section>
+{% endblock %}

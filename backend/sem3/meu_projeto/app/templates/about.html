@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sobre Nós</title>
+    <!-- CSS estático via Jinja2 -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <header>
+        <!-- Link de navegação usando o nome da rota (blueprint.funcao) -->
+        <a href="{{ url_for('main.home') }}">Voltar para a Home</a>
+    </header>
+
+    <main>
+        <h1>Perfil de {{ username }}</h1>
+        <p>Idade: {{ age }}</p>
+
+        <!-- Imagem estática via Jinja2 -->
+        <img src="{{ url_for('static', filename='flask.png') }}" alt="Logo Flask">
+
+        <h2>Produtos:</h2>
+        <ul>
+            {% for product in products %}
+                <li>{{ product }}</li>
+            {% endfor %}
+        </ul>
+    </main>
+
+    <!-- JS estático via Jinja2 -->
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
