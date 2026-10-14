@@ -1,6 +1,6 @@
-# Backend Python Study Repository
+# Backend Python
 
-Bem-vindo ao repositório de estudos de Backend em Python! Este projeto reúne conceitos, práticas e ferramentas modernas de desenvolvimento Web API utilizando a stack Python, com foco no ecossistema Flask, validação com Pydantic e segurança com JWT.
+Repositório de estudos de Backend em Python que reúne conceitos, práticas e ferramentas modernas de desenvolvimento Web API utilizando a stack Python, com foco no ecossistema Flask, validação com Pydantic e segurança com JWT.
 
 ## Tecnologias & Ferramentas Principais
 
