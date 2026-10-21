@@ -1,0 +1,258 @@
+{
+  "info": {
+    "_postman_id": "5673f4c6-5947-4a80-873c-1c96a130a2cc",
+    "name": "Meus",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "25921017",
+    "_collection_link": "https://go.postman.co/collection/25921017-5673f4c6-5947-4a80-873c-1c96a130a2cc?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "upload",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": [
+                "AQFMiG8mM/87396846.jpg"
+              ]
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/upload",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "upload"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "cache",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/dados-pesados",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "dados-pesados"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "excecoes_Rota inexistente",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/rota-que-nao-existe",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "rota-que-nao-existe"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "excecoes_Erro interno forçado - 500",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/erro-interno",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "erro-interno"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "excecoes_Sucesso",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/processar",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "processar"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "logging",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/processar",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "processar"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "logging get ou post POST",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/processar_2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "processar_2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "logging get ou post GET",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/processar_2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "processar_2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "test-pydantic_ok",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"username\": \"dev_python\",\r\n  \"password\": \"senha_segura_123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/test-pydantic",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "test-pydantic"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "test-pydantic_error",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"username\": \"ab\",\r\n  \"password\": \"123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/test-pydantic",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "test-pydantic"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
